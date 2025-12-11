@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D3.js Comprehensive Lab</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; max-width: 1000px; margin: 0 auto; padding: 20px; background: #f9f9f9; }
+        h2 { border-bottom: 2px solid #333; padding-bottom: 10px; margin-top: 50px; }
+        .chart-container { background: white; padding: 20px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); border-radius: 8px; margin-bottom: 20px; }
+        
+        /* UI Controls */
+        .controls { margin-bottom: 15px; padding: 10px; background: #eee; border-radius: 5px; display: flex; gap: 15px; align-items: center; }
+        input[type="text"] { padding: 5px; border-radius: 4px; border: 1px solid #ccc; }
+        button { padding: 5px 15px; cursor: pointer; background: #333; color: white; border: none; border-radius: 4px; }
+        button:hover { background: #555; }
+
+        /* Task specific styles */
+        .tooltip { position: absolute; background: rgba(0,0,0,0.8); color: white; padding: 5px 10px; border-radius: 4px; opacity: 0; pointer-events: none; font-size: 12px; }
+        
+        /* Task 3 Breadcrumbs */
+        #breadcrumbs { font-weight: bold; color: #555; margin-bottom: 10px; }
+        
+        /* Task 4 Layout */
+        #dashboard-row { display: flex; gap: 20px; }
+        .half-width { width: 50%; }
+    </style>
+</head>
+<body>
+
+    <h1>D3.js Advanced Visualizations</h1>
+
+    <!-- TASK 1 -->
+    <div id="task1">
+        <h2>Task 1: Interactive Line Chart (Brush & Zoom)</h2>
+        <p>Use the bottom mini-chart to brush/zoom. Click legend items to toggle lines.</p>
+        <div id="container1" class="chart-container"></div>
+    </div>
+
+    <!-- TASK 2 -->
+    <div id="task2">
+        <h2>Task 2: Force-Directed Graph</h2>
+        <p>Drag nodes. Click to freeze/unfreeze. Hover to highlight connections.</p>
+        <div id="container2" class="chart-container"></div>
+    </div>
+
+    <!-- TASK 3 -->
+    <div id="task3">
+        <h2>Task 3: Zoomable Treemap</h2>
+        <div class="controls">
+            <input type="text" id="searchBox" placeholder="Search module name...">
+            <button onclick="searchNode()">Search</button>
+            <span id="breadcrumbs">Root</span>
+        </div>
+        <div id="container3" class="chart-container"></div>
+    </div>
+
+    <!-- TASK 4 -->
+    <div id="task4">
+        <h2>Task 4: Real-Time Dashboard</h2>
+        <div class="controls">
+            <button id="toggleStream">Pause Stream</button>
+            <label>Threshold: <span id="threshVal">50</span></label>
+            <input type="range" id="thresholdSlider" min="0" max="100" value="50">
+        </div>
+        <div id="dashboard-row">
+            <div class="half-width chart-container" id="chartA"></div>
+            <div class="half-width chart-container" id="chartB"></div>
+        </div>
+    </div>
+
+    <!-- D3 Library -->
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <!-- Main Script -->
+    <script src="script.js"></script>
+</body>
+</html>

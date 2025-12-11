@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>IEA Dashboard: Global Power Analysis</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://unpkg.com/topojson@3"></script>
+</head>
+
+<body>
+    <header>
+        <div>
+            <h1>Global Power Plant Database</h1>
+            <p>IEA Contract: Spatial & Network Analysis</p>
+        </div>
+        <div>
+            <a href="task2.html" style="color: white; margin-right: 20px;">Go to Task 2</a>
+        </div>
+        <div id="stats-panel">
+            <div id="stats-total">Loading...</div>
+            <div id="stats-filter" style="font-size: 0.8em; color: #aaa;"></div>
+        </div>
+    </header>
+
+    <div class="dashboard-grid">
+        <div id="map-container">
+            <div class="view-label">Global Distribution (Zoom for Details)</div>
+        </div>
+
+        <div id="force-container">
+            <div class="view-label">Fuel Mix (Click to Filter)</div>
+        </div>
+
+        <div id="timeline-container">
+            <div class="view-label">Capacity Added per Year (Brush to Filter)</div>
+        </div>
+    </div>
+
+    <script src="js/state.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/map.js"></script>
+    <script src="js/force.js"></script>
+    <script src="js/timeline.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

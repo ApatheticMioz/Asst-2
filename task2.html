@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>UNDP Dashboard: Wealth & Health Simulation</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://unpkg.com/topojson@3"></script>
+</head>
+
+<body>
+    <header>
+        <div>
+            <h1>Global Development Indicators</h1>
+            <p>UNDP Simulation: Wealth vs. Health (1800-2023)</p>
+        </div>
+        <div>
+            <a href="task1.html" style="color: white; margin-right: 20px;">Go to Task 1</a>
+        </div>
+    </header>
+
+    <div class="dashboard-grid-2">
+        <div id="motion-container">
+            <div class="view-label">Motion Chart (GDP vs Life Expectancy)</div>
+        </div>
+
+        <div id="choropleth-container">
+            <div class="view-label">Life Expectancy Map</div>
+        </div>
+
+        <div id="controls-container">
+            <div class="control-panel">
+                <button id="play-btn">Play</button>
+                <!-- D3 drag-based slider will be created in controls.js -->
+                <div id="year-slider-container"></div>
+                <span id="year-display">1800</span>
+            </div>
+            <div id="drilldown-container" style="flex-grow: 1; position: relative;">
+                <div class="view-label">Regional Drill-Down (Hover to Highlight)</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/utils.js"></script>
+    <script src="js/motion_chart.js"></script>
+    <script src="js/choropleth_map.js"></script>
+    <script src="js/controls.js"></script>
+    <script src="js/task2_main.js"></script>
+</body>
+
+</html>

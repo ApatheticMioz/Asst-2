@@ -1,0 +1,6 @@
+pandas
+parse
+requests
+gspread
+gspread-pandas
+xlrd
