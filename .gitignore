@@ -1,22 +1,45 @@
+# Dependencies
 node_modules/
+vendor/
+
+# Build outputs
 dist/
+build/
 .parcel-cache/
 .cache/
-*.log
 
+# Logs
+*.log
+npm-debug.log*
+
+# Environment
 .env
 .env.*
+
+# IDE/Editor
 .vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
 .DS_Store
 Thumbs.db
+Desktop.ini
 
+# Python
 .venv/
 venv/
 __pycache__/
 *.pyc
+*.pyo
+*.egg-info/
 
+# Jupyter
 .ipynb_checkpoints/
 
+# LaTeX artifacts
 *.aux
 *.bbl
 *.blg
@@ -34,4 +57,18 @@ __pycache__/
 *.nav
 *.snm
 
+# Archives
 *.zip
+*.rar
+*.7z
+*.tar.gz
+
+# Compiled binaries
+*.exe
+*.o
+*.obj
+*.dll
+*.so
+*.dylib
+main
+app
